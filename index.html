@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>특약사항 변경 및 추가 — 우남하우징Ⅱ</title>
+<title>특약사항 (통합본) — 우남하우징Ⅱ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -61,81 +61,84 @@
   }
   header.hero .meta b{color:#fff;font-weight:500;}
 
-  main{padding:28px 20px 0;}
+  main{padding:26px 20px 0;}
 
-  .article{margin-bottom:34px;}
-  .article .head{
-    display:flex;
-    align-items:baseline;
-    gap:10px;
-    margin-bottom:10px;
-    padding-bottom:8px;
-    border-bottom:2px solid var(--navy);
+  .preamble{
+    font-size:14px;
+    color:var(--ink-soft);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    margin-bottom:26px;
   }
-  .article .head .tag{
+
+  .item{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .item:last-of-type{border-bottom:none;}
+  .item .no{
+    flex:0 0 30px;
     font-family:'Noto Serif KR', serif;
     font-weight:700;
     font-size:16px;
-    color:var(--navy);
-    white-space:nowrap;
+    color:var(--gold);
   }
-  .article .head h2{
-    margin:0;
-    font-size:16px;
-    font-weight:700;
-    color:var(--ink);
-  }
-  .article .body{
-    font-size:15px;
+  .item .txt{
+    font-size:14.5px;
     color:var(--ink-soft);
   }
-  .article .body p{margin:0 0 10px;}
-  .article .body p:last-child{margin-bottom:0;}
+  .item .txt .label{
+    display:block;
+    font-weight:700;
+    color:var(--navy);
+    font-size:14.5px;
+    margin-bottom:4px;
+  }
+  .item.strong{
+    background:linear-gradient(180deg,#fff,var(--paper));
+    border:1px solid #e0d7bd;
+    border-radius:12px;
+    padding:16px 16px;
+    margin:6px 0;
+  }
+  .item.strong .no{color:var(--navy);}
 
-  ol.numlist{margin:6px 0 0;padding-left:20px;}
-  ol.numlist li{margin-bottom:8px;}
-  ol.numlist li:last-child{margin-bottom:0;}
-
-  ul.sub{
+  .sub-a{
     list-style:none;
     margin:8px 0 0;
     padding:0;
-    display:grid;
-    gap:6px;
   }
-  ul.sub li{
+  .sub-a li{
+    display:flex;
+    gap:8px;
+    padding:5px 0;
     font-size:13.5px;
-    color:var(--ink-soft);
-    padding-left:14px;
-    position:relative;
   }
-  ul.sub li::before{
-    content:"·";
-    position:absolute;
-    left:0;
-    color:var(--gold);
-  }
-  ul.sub li b{color:var(--navy);font-weight:700;}
+  .sub-a li .letter{color:var(--gold);font-weight:700;flex:0 0 16px;}
 
-  .callout{
-    margin:12px 0 0;
-    padding:12px 14px;
-    border-radius:10px;
-    font-size:13.5px;
-    line-height:1.6;
-  }
-  .callout.alert{background:var(--alert-soft);border:1px solid #edc9bd;color:var(--alert);}
-  .callout.ok{background:var(--ok-soft);border:1px solid #c9e2d3;color:var(--ok);}
-  .callout .lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;margin-bottom:4px;}
-
-  .fill{
-    display:inline-block;
-    min-width:64px;
-    border-bottom:1.5px dotted var(--gold);
-    color:var(--gold);
-    font-weight:700;
+  .divider{
+    margin:30px 0 22px;
     text-align:center;
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:.2em;
   }
+
+  .footer-box{
+    margin:24px 0 0;
+    padding:18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.8;
+  }
+  .footer-box b{color:var(--ink);}
 
   .footer-note{
     margin:20px 20px 0;
@@ -157,8 +160,8 @@
 <div class="wrap">
 
   <header class="hero">
-    <div class="eyebrow">특약사항 변경 및 추가 (안)</div>
-    <h1>우남하우징Ⅱ 매매계약<br>변경계약서 특약</h1>
+    <div class="eyebrow">특약사항 (통합본)</div>
+    <h1>우남하우징Ⅱ<br>오피스텔 1동 매매계약</h1>
     <div class="meta">
       <span>소재지 <b>서울 관악구 봉천동 877-4</b></span>
       <span>세대 <b>61개 호실 (실제 63개)</b></span>
@@ -167,106 +170,135 @@
 
   <main>
 
-    <div class="article">
-      <div class="head"><span class="tag">제1조</span><h2>잔금지급일 변경</h2></div>
-      <div class="body">
-        <p>원 계약서상 잔금지급일을 <span class="fill">2026. __. __.</span>로 변경한다.</p>
+    <div class="item">
+      <div class="no">1</div>
+      <div class="txt">본 계약은 현장확인을 하고 진행하는 계약일 현재 상태의 매매계약이며, 오피스텔 1동 전체에 대한 통매매로, 임대차관계, 보증금, 관리에 관해 포괄하여 양도 양수하는 계약임을 상호 확인한다. (해당 오피스텔 1동에 포함된 전체 호실은 별지 호실 목록에 따른다.)</div>
+    </div>
+
+    <div class="item">
+      <div class="no">2</div>
+      <div class="txt">계약일 당일 매도인이 제시한 임대보증금의 합계액은 약 42억원, 월 차임은(관리비포함) 약 1,200만원임을 매도인이 제공한 임대차계약서를 통해 상호 확인(임대차계약서 사본 제공)하며, 임대차 계약서 확인시 중대한 허위 또는 누락사실이 발견될 경우 그로인한 손해를 배상할 책임이 있다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">3</div>
+      <div class="txt">적법한 절차를 통해 해당건물의 증축내용을 고지하였음(건축과-17959(2019.07.17)호의 의거 증축[내역: 지상7층(1.38㎡)및 지상8층(15.38㎡)증축](건축물대장상 704호, 705호, 803호, 804호에 추가로 면적을 기입함)</div>
+    </div>
+
+    <div class="item">
+      <div class="no">4</div>
+      <div class="txt">잔금지급일은 2026년 <u>&nbsp;&nbsp;__&nbsp;&nbsp;</u>월 <u>&nbsp;&nbsp;__&nbsp;&nbsp;</u>일로 하며, 이는 매도인과 매수인이 협의하여 조정한 것임을 상호 확인한다. 매매대금은 총 매매금액에서 기지급된 계약금 및 중도금, 그리고 잔금지급일 시점 계약서상 임차인들의 임대보증금 총액(원금 기준)을 공제하여 정산한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">5</div>
+      <div class="txt">잔금지급일이 속한 월의 임대료 및 관리비는, 잔금지급일 당일을 매수인 귀속의 시작일로 하여 일수 비례로 매도인과 매수인이 안분하여 정산한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">6</div>
+      <div class="txt">
+        <span class="label">미납금 정산</span>
+        잔금일 안분정산 대상 기간 이전에 발생한 세대별 미납 월세·관리비·공과금(연체분 포함)은 본 매매대금 정산과 무관한 매도인 고유의 채권으로 하며, 매도인이 본인의 책임과 비용으로 직접 회수한다. 매도인은 상기 미납금을 임대차보증금에서 공제하거나 이를 사유로 매수인에게 승계할 보증금을 감액할 수 없다. 매수인은 상기 미납금과 관련하여 어떠한 책임도 부담하지 아니하며, 향후 해당 세대의 임대차 종료에 따른 보증금 반환 시에도 이를 사유로 공제하지 아니하고 계약서상 보증금 원금 전액을 반환한다.
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제2조</span><h2>인수인계 대상 및 완료 시한</h2></div>
-      <div class="body">
-        <p>매도인은 잔금지급일 <span class="fill">__</span>일 전까지 다음 각 호의 자료·물품·관리업체 현황을 서면·전자파일로 매수인에게 제공하고 실물을 인계하여야 한다.</p>
-        <ol class="numlist">
-          <li>세대별 임대차계약서 원본, 임차인 성명·연락처, 보증금·월차임·계약기간·갱신여부·특약사항 현황표</li>
-          <li>세대별 보증금 잔액·변동 내역, 잔금일 기준 보증금·월세·관리비·주차비 총액 정산표</li>
-          <li>수도·전기·가스 사용료 배분 산식이 반영된 관리비 산정 파일(실사용 정산 양식 원본), 최근 12개월 세대별 정산 내역, 검침 주기·방법</li>
-          <li>기계식 주차장 작동방법, 리모컨(키), 유지보수 계약서 사본</li>
-          <li>건물 관리·운영 관련 계약 업체 현황 및 인수인계
-            <ul class="sub">
-              <li><b>통신</b> — 인터넷·전화 계약서, 계약기간·비용, 담당자 연락처</li>
-              <li><b>소방</b> — 소방안전관리 계약서, 최근 점검·소방필증 자료, 담당자</li>
-              <li><b>수도·전기</b> — 검침·유지관리 계약서(있는 경우), 검침 방법, 담당자</li>
-              <li><b>승강기</b> — 유지보수 계약서, 최근 정기검사 이력, 담당자</li>
-              <li><b>정화조</b> — 관리 계약서, 최근 준설 이력, 담당자</li>
-              <li><b>CCTV</b> — 관리업체 또는 자체관리 방식, 접속 정보, 담당자</li>
-              <li><b>기타</b> — 건물 운영 관련 일체의 용역·관리 계약 현황</li>
-            </ul>
-          </li>
-          <li>매수인이 인수를 원하지 않는 건물 내 물품 목록(별지) 확인</li>
-          <li>각종 시설 열쇠(공용부·마스터키 등) 및 운영상 특이사항 정리 내역</li>
-        </ol>
+    <div class="item">
+      <div class="no">7</div>
+      <div class="txt">
+        매도인은 잔금지급일 <u>&nbsp;&nbsp;__&nbsp;&nbsp;</u>일 전까지 다음 각 목의 자료·물품·관리업체 현황을 서면·전자파일로 매수인에게 제공하고 실물을 인계하여야 한다.
+        <ul class="sub-a">
+          <li><span class="letter">가.</span><span>세대별 임대차계약서 원본, 임차인 성명·연락처, 보증금·월차임·계약기간·갱신여부·특약사항 현황표</span></li>
+          <li><span class="letter">나.</span><span>세대별 보증금 잔액·변동 내역, 잔금일 기준 보증금·월세·관리비·주차비 총액 정산표</span></li>
+          <li><span class="letter">다.</span><span>수도·전기·가스 사용료 배분 산식이 반영된 관리비 산정 파일(실사용 정산 양식 원본), 최근 12개월 세대별 정산 내역, 검침 주기·방법</span></li>
+          <li><span class="letter">라.</span><span>기계식 주차장 작동방법, 리모컨(키), 유지보수 계약서 사본</span></li>
+          <li><span class="letter">마.</span><span>건물 관리·운영 관련 계약 업체 현황 및 인수인계(통신, 소방안전관리, 수도·전기 검침 및 유지관리, 승강기 유지보수, 정화조 관리, CCTV, 기타 용역·관리 계약의 계약서 사본, 계약조건, 담당자 연락처)</span></li>
+          <li><span class="letter">바.</span><span>매수인이 인수를 원하지 않는 건물 내 물품 목록(별지) 확인</span></li>
+          <li><span class="letter">사.</span><span>각종 시설 열쇠(공용부·마스터키 등) 및 운영상 특이사항 정리 내역</span></li>
+        </ul>
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제3조</span><h2>미납 공과금·미납 월세의 정산</h2></div>
-      <div class="body">
-        <p>매도인은 잔금지급일 전까지 본인의 책임과 비용으로 잔금일 기준 세대별 미납 관리비·공과금 및 미납 임차료(연체분 포함)를 정리하고, 그 명세서를 제2조 자료와 함께 제공한다.</p>
-        <div class="callout alert"><span class="lbl">미이행 시</span>정리되지 않은 미납분은 잔금에서 공제한다.</div>
+    <div class="item">
+      <div class="no">8</div>
+      <div class="txt">
+        <span class="label">인수인계 자료의 확인 및 기명날인</span>
+        위 제7호에 따라 매도인이 제공하는 세대별 임대차계약서 현황표, 보증금·정산 명세, 관리업체 현황 등 인수인계 자료는 매도인과 매수인 쌍방이 기명날인하여 그 내용을 상호 확인한다. 매도인은 상기 자료의 내용이 제공 시점 실제 현황과 일치함을 보장하며, 잔금지급일 이후라도 임차인의 부존재, 보증금·차임의 상이, 계약조건의 누락 등 실제와 다른 사실이 발견되는 경우 이로 인하여 매수인에게 발생한 손해를 배상할 책임을 진다.
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제4조</span><h2>미인수 물품의 처리</h2></div>
-      <div class="body">
-        <p>매수인이 인수를 원하지 않는 건물 내 잔존 물품은 매도인의 책임과 비용으로 잔금지급일 전까지 철거·폐기한다.</p>
-        <div class="callout alert"><span class="lbl">미이행 시</span>매수인이 임의로 처리하고 그 비용을 잔금에서 공제할 수 있다.</div>
+    <div class="item">
+      <div class="no">9</div>
+      <div class="txt">매수인이 인수를 원하지 않는 건물 내 잔존 물품은 매도인의 책임과 비용으로 잔금지급일 전까지 철거·폐기하며, 미이행 시 매수인이 임의로 처리하고 그 비용을 잔금에서 공제할 수 있다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">10</div>
+      <div class="txt">위 제6호(미납금 정산), 제7호(인수인계) 및 제8호(인수인계 자료 확인)에 따른 정산 및 인수인계가 완료되지 아니하는 한, 매수인의 잔금지급의무는 발생하지 아니한다. 매도인이 시한까지 인수인계를 완료하지 아니하는 경우 매수인은 그 지연 기간만큼 잔금지급일을 연기할 수 있으며, 이로 인한 지연에 대하여 매수인은 어떠한 책임도 지지 아니한다. 인수인계 항목 중 일부가 누락된 경우 매수인은 해당 부분에 상당하는 금액을 잔금에서 유보할 수 있으며, 잔금지급 이후에도 인수인계 의무는 소멸하지 아니한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">11</div>
+      <div class="txt">
+        <span class="label">중대한 하자의 정의 및 보장</span>
+        중대한 하자라 함은 누수뿐만 아니라 엘리베이터, 기계식 주차장치, 정화조, 상수도·소방설비 등 건물 주요 설비의 작동불능 또는 심대한 고장을 포함한다. 이에 대해서는 잔금지급일로부터 6개월간 매도인이 보장하며, 잔금지급일 전까지 각 세대별로 수리할 내용이 있다면 모두 수리완료 후에 양도키로 한다. 단 계약일 현재 매도인이 고지하지 않은 부분에 중대한 하자가 있을 경우, 하자담보책임과는 별개로 매도인이 이를 수리해주기로 한다.
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제5조</span><h2>인수인계 완료를 잔금지급의 선행조건으로 함</h2></div>
-      <div class="body">
-        <ol class="numlist">
-          <li>제2조·제3조의 인수인계 및 정산이 완료되지 아니하는 한, 매수인의 잔금지급의무는 발생하지 아니한다.</li>
-          <li>매도인이 시한까지 완료하지 아니하면, 매수인은 지연 기간만큼 잔금지급일을 연기할 수 있고 이에 대해 어떠한 책임도 지지 않는다.</li>
-          <li>일부 누락 시, 매수인은 해당 부분에 상당하는 금액을 잔금에서 유보할 수 있다.</li>
-          <li>잔금지급 이후에도 인수인계 의무는 소멸하지 아니한다.</li>
-        </ol>
+    <div class="item">
+      <div class="no">12</div>
+      <div class="txt">
+        <span class="label">계약일부터 잔금지급일까지의 선량한 관리 의무</span>
+        매도인은 계약체결일부터 잔금지급일까지 선량한 관리자의 주의로 건물 및 제11호에 정한 주요 설비를 계약일 현재 상태로 유지·관리하여야 한다. 매도인의 고의 또는 과실로 인한 훼손, 방치, 관리 소홀로 발생한 손해에 대하여는 매도인이 그 책임을 지며, 수리비 상당액을 잔금에서 공제하거나 매도인의 비용으로 잔금지급일 전까지 수리를 완료하여야 한다.
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제6조</span><h2>기존 특약사항의 승계 및 재확인</h2></div>
-      <div class="body">
-        <p>원 계약서 특약 중 아래는 본 변경계약에서도 그대로 유효하며, 잔금 전까지 이행을 재확인한다.</p>
-        <ol class="numlist">
-          <li>
-            509·609·702·801·804호 채권자대위 판결금(호실당 2,400만원)은 매도인이 잔금지급 전까지 완제·말소한다.
-            <div class="callout alert"><span class="lbl">미확인 시</span>해당 금액을 잔금에서 유보한다.</div>
-          </li>
-          <li>8층 808·809호 증축 관련, 703·704·803·804호의 건축물대장상 면적으로 잔금지급까지 등기 완료. (등기상 61개 호실, 실제 63개 호실임을 매수인 확인)</li>
-          <li>중대한 하자(누수 등)는 잔금지급일로부터 6개월간 매도인이 보장하며, 미고지 중대 하자 발견 시 하자담보책임과 별개로 매도인이 수리한다.</li>
-          <li>계약 불이행 시 계약금은 위약금으로 하며, 매수인은 계약금 포기, 매도인은 배액 상환으로 해제할 수 있다.</li>
-          <li>본 계약은 개별등기 호실 일괄 매도·매수로 계약서는 한 부, 거래신고는 호실마다 개별 신고한다.</li>
-          <li>거래 당사자는 계약서 작성·관리 및 고객관리를 위한 개인정보 수집·이용에 동의한다.</li>
-          <li>본 특약에 기재되지 않은 사항은 민법상 계약 규정과 부동산매매 일반 관례에 따른다.</li>
-        </ol>
+    <div class="item">
+      <div class="no">13</div>
+      <div class="txt">
+        <span class="label">잔금지급일 전 현황 점검</span>
+        매수인은 잔금지급일 <u>&nbsp;&nbsp;__&nbsp;&nbsp;</u>일 전, 제7호의 인수인계와 함께 건물 주요 설비(엘리베이터, 기계식 주차장치, 정화조, 상하수도, 소방설비, 전기설비 등)에 대한 현장 점검(작동 테스트 포함)을 실시할 수 있으며, 매도인은 이에 적극 협조한다. 점검 결과 중대한 하자가 발견된 경우, 이는 제10호(잔금지급의 선행조건)에 따라 처리한다.
       </div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제7조</span><h2>사업의 포괄적 양도·양수 및 협조의무</h2></div>
-      <div class="body">
-        <p>본 거래는 「부가가치세법」 제10조제9항제2호 및 같은 법 시행령 제23조에 따른 사업의 포괄적 양도·양수임을 상호 확인하며, 매도인은 사업양도신고 등 제반 절차에 협조한다.</p>
-        <div class="callout ok"><span class="lbl">참고</span>별도의 포괄양도양수계약서는 본 특약에 따른 인수인계가 완료된 것을 전제로 잔금지급일에 체결한다.</div>
-      </div>
+    <div class="item">
+      <div class="no">14</div>
+      <div class="txt">위 계약내용에 대하여 매도인과 매수인은 상호합의하였으므로 단순변심은 불가하며 계약금의 포기 또는 배액을 상환함으로써 계약을 해제할 수 있고, 계약체결 후 일방이 계약을 불이행하는 경우 계약금을 위약금으로 본다.</div>
     </div>
 
-    <div class="article">
-      <div class="head"><span class="tag">제8조</span><h2>기타</h2></div>
-      <div class="body">
-        <p>본 특약에 정하지 아니한 사항은 원 계약서 및 관련 법령, 일반 관례에 따른다.</p>
-      </div>
+    <div class="item">
+      <div class="no">15</div>
+      <div class="txt">본계약은 개별등기된 호실들을 일괄 매도 매수 하는 계약으로 계약서 한부로 작성하고 개별호실별 거래가격을 별지로 첨부하기로 한다. 또한 거래신고는 호실마다 개별적으로 신고하여야 한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">16</div>
+      <div class="txt">거래 당사자는 계약서 작성 및 관리, 고객관리 등 각종 서비스의 제공을 위해 개인정보수집 및 이용에 동의한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">17</div>
+      <div class="txt">본 거래는 「부가가치세법」 제10조제9항제2호 및 같은 법 시행령 제23조에 따른 사업의 포괄적 양도·양수임을 상호 확인하며, 매도인은 사업양도신고 등 제반 절차에 협조한다. 별도의 포괄양도양수계약서는 본 특약에 따른 인수인계가 완료된 것을 전제로 잔금지급일에 체결한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">18</div>
+      <div class="txt">본 건 매매에 따른 부가가치세 해당 여부는 관련 법령에 따르며, 세무상 책임은 귀속 시점별로 각 당사자가 부담한다. 필요 시 세무조정을 위한 자료 제공에 상호 협조한다.</div>
+    </div>
+
+    <div class="item">
+      <div class="no">19</div>
+      <div class="txt">본 특약사항에 기재되지 않은 사항은 민법상 계약에 관한 규정과 부동산매매 일반 관례에 따른다.</div>
     </div>
 
   </main>
 
-  <div class="footer-note">
-    본 문서는 협상 및 계약 준비를 위한 초안입니다. 최종 서명 전 세부 문구는 법률·세무 전문가 검토를 권장합니다.
+  <div class="footer-box">
+    <b>매도인 계좌번호</b> : 기업은행 070-070476-04-013 [우남하우징 오피스텔 우덕진]<br>
+    <b>개별호실별 거래가격</b> 별지 첨부<br>
+    <b>별지</b> : 오피스텔 1동 전체 호실 목록 (201호~805호 및 806호·807호 포함)
   </div>
+
 
 </div>
 </body>
